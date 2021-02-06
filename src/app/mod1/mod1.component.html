@@ -1,0 +1,36 @@
+<p>{{ date | date }}</p>
+<p>{{ date | date: "yyyy.MM.dd" }}</p>
+<p>{{ date | date: "dd.MM.yy" }}</p>
+<p>{{ date | date: "dd.MM.yy HH.mm.ss" }}</p>
+<p>{{ dateNow }}</p>
+
+<p>{{ pi | number: "2.1-2" }}</p>
+
+<p>{{ money | currency: "RUB":"code" }}</p>
+<p>{{ money | currency: "USD":"symbol" }}</p>
+<p>{{ money | currency: "RUB":"symbol-narrow" }}</p>
+<p>{{ money | currency: "RUB":"рубль" }}</p>
+<p>{{ money | currency: "RUB":"symbol-narrow":"2.5" }}</p>
+<p>{{ money | currency: "RUB":"рубль" | uppercase }}</p>
+<p>{{ money | currency: "RUB":"рубль" | slice: 4:11 }}</p>
+
+<p>{{ getTextHello }}</p>
+
+<p>
+  {{
+    "+7 " +
+      "(" +
+      (phoneNum | slice: 0:3) +
+      ")" +
+      (phoneNum | slice: 3:6) +
+      "-" +
+      (phoneNum | slice: 6:8) +
+      "-" +
+      (phoneNum | slice: 8:10)
+  }}
+</p>
+<p>{{ phoneNums | phone }}</p>
+
+<p>{{ getPhone }}</p>
+
+<p>{{phone|async}}</p>
